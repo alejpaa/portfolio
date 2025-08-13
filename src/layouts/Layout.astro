@@ -19,8 +19,29 @@ const { description, title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
+    <link rel="canonical" href={Astro.url.href} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Open Graph / Facebook
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    Twitter -->
+    <!-- <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url.href} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/og-image.jpg" /> -->
+
+    <!-- Additional SEO tags -->
+    <meta name="author" content="Alejandro Manuel Padilla Arellano" />
+    <meta name="keywords" content="backend developer,fullstack developer, desarrollador backend, linux, rust, python, typescript, docker, postgresql, node.js" />
+    <meta name="robots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
+    
     <title>{title}</title>
     <ViewTransitions />
   </head>
