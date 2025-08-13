@@ -110,13 +110,13 @@ const PROJECTS = [
           {title}
         </h3>
         <div class="flex flex-wrap mt-2">
-          <ul class="flex flex-row mb-2 gap-x-2">
+          <ul class="flex flex-wrap gap-2">
             {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex items-center gap-x-1 md:gap-x-2 rounded-full text-[10px] md:text-xs ${tag.class} py-1 px-1.5 md:px-2`}
               >
-                <tag.icon class="size-4" />
+                <tag.icon class="size-3 md:size-4" />
                 {tag.name}
               </span>
             </li>
