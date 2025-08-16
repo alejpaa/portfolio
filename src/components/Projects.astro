@@ -11,6 +11,9 @@ import Whatsapp from "./icons/Whatsapp.astro"
 import PostgreSQL from "./icons/PostgreSQL.astro"
 import Express from "./icons/Express.astro"
 import TypeScript from "./icons/TypeScript.astro"
+import Image from "astro/components/Image.astro"
+import ayudIAImg from "../images/projects/ayudIA.webp"
+import clinicaImg from "../images/projects/clinica.webp"
 const TAGS = {
   NEXT: {
     name: "Next.js",
@@ -63,16 +66,16 @@ const PROJECTS = [
     title: "AyudIA - Asistente Virtual para WhatsApp",
     description: "Bot inteligente para WhatsApp que responde preguntas y gestiona consultas empresariales usando IA (Ollama/OpenAI).",
     github: "https://github.com/alejpaa/ayudIA",
-    image: "/projects/ayudIA.webp",
+  image: ayudIAImg,
     tags: [TAGS.REACT,TAGS.OLLAMA,TAGS.DOCKER,TAGS.TAILWIND,TAGS.WHATSAPP],
   },
   {
-    title: "BD1 Clínica - Gestión integral para clínicas",
+    title: "Clinica San Marcos - plataforma web para agendar citas",
     description:
       "Aplicación web para la gestión de pacientes, médicos, especialidades y turnos en clínicas. Permite registrar admisiones, realizar triajes, administrar especialidades y gestionar el personal médico.",
     link: "", // Agrega el enlace de despliegue si lo tienes
     github: "https://github.com/Matrix1102/bd1_clinica",
-    image: "/projects/clinica.webp", // Cambia la ruta por la imagen que prefieras
+  image: clinicaImg, // Cambia la ruta por la imagen que prefieras
     tags: [TAGS.REACT,TAGS.TYPESCRIPT,TAGS.EXPRESS, TAGS.POSTGRESQL]//["Node.js", "Express", "TypeScript", "React", "Vite"],
   },
   // {
@@ -93,6 +96,7 @@ const PROJECTS = [
   //   tags: [TAGS.NEXT, TAGS.TAILWIND],
   // },
 ]
+
 ---
 
 <div class="flex flex-col gap-y-16">
@@ -101,7 +105,11 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
       <div class="w-full md:w-1/2">
         <div class="relative flex flex-col items-center h-80 transition duration-500 ease-in-out transform shadow-xl overflow-hidden rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-          <img alt={title} class="object-cover w-full h-full transition duration-500 md:group-hover:scale-105" loading="lazy" src={image} />
+          <Image 
+            alt={title} 
+            class="object-cover w-full h-full transition duration-500 md:group-hover:scale-105" 
+            loading="eager" 
+            src={image} />
         </div>
       </div>
 
